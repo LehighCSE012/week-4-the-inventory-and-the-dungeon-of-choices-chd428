@@ -103,25 +103,26 @@ def check_for_treasure(has_treasure):
 
 def enter_dungeon(player_health, inventory, dungeon_rooms):
     """iterates through each room in dungeon rooms"""
+    userschoice = ""
     for rooms in dungeon_rooms:
         print(rooms[0])
-        if rooms[1] != None:
+        if rooms[1] is not None:
             acquire_item(inventory, rooms[1])
         if rooms[2] == "puzzle":
             print("You encounter a puzzle!")
             userschoice = input("'Solve' or 'Skip'? ")
-            if userschoice == "Solve":
+            if userschoice in ("Solve", "solve"):
                 success = random.choice([True,False])
-                if success == True:
+                if success is True:
                     print(rooms[3][0])
                 else:
                     print(rooms[3][1])
         elif rooms[2] == "trap":
             print("You see a potential trap!")
             userschoice == input("'Disarm' or 'Bypass'? ")
-            if userschoice == "Disarm" or userschoice == "disarm":
+            if userschoice in ("Disarm", "disarm"):
                 success = random.choice([True,False])
-                if success == True:
+                if success is True:
                     print(rooms[3][0])
                 else:
                     print(rooms[3][1])
