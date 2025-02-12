@@ -6,7 +6,7 @@ import random
 def acquire_item(inventory, item):
     """appends item to inventory list, prints a message"""
     inventory.append(item) #APPEND - adds an item to the inventory list, used to update the list
-    print("You found a " + item + " in the room.")
+    print("You acquired a " + item + "!")
     return inventory
 
 def display_inventory(inventory):
