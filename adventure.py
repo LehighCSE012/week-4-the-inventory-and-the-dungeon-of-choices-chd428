@@ -108,7 +108,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
         print(rooms[0])
         if rooms[1] is not None:
             acquire_item(inventory, rooms[1])
-            print("You found a " + item + " in the room.")
+            print("You found a " + rooms[1] + " in the room.")
         if rooms[2] == "puzzle":
             print("You encounter a puzzle!")
             userschoice = input("'Solve' or 'Skip'? ")
