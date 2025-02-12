@@ -6,7 +6,7 @@ import random
 def acquire_item(inventory, item):
     """appends item to inventory list, prints a message"""
     inventory.append(item) #APPEND - adds an item to the inventory list, used to update the list
-    print("You found a " + item + " in the room.")
+    print("You aquired a " + item + "!")
     return inventory
 
 def display_inventory(inventory):
@@ -108,6 +108,7 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
         print(rooms[0])
         if rooms[1] is not None:
             acquire_item(inventory, rooms[1])
+            print("You found a " + item + " in the room.")
         if rooms[2] == "puzzle":
             print("You encounter a puzzle!")
             userschoice = input("'Solve' or 'Skip'? ")
