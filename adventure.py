@@ -137,13 +137,13 @@ def enter_dungeon(player_health, inventory, dungeon_rooms):
             print("You are barely alive!")
         display_inventory(inventory)
     display_player_status(player_health)
-    print("If you try to run 'dungeon_rooms.pop[1],")
-    if type(dungeon_rooms[1]) != tuple:
-        dungeon_rooms.pop([1]) #POP - removes value from list,
+    #print("If you try to run 'dungeon_rooms.pop[1],")
+    #if type(dungeon_rooms[1]) != tuple:
+        #dungeon_rooms.pop([1]) #POP - removes value from list,
         #used to demonstrate that tuple cannot be changed
-    else:
-        print(dungeon_rooms[1], " - it can't be changed, it is immutable!")
-        print("Trying to pop it would result in a TypeError!")
+    #else:
+        #print(dungeon_rooms[1], " - it can't be changed, it is immutable!")
+        #print("Trying to pop it would result in a TypeError!")
     return player_health, inventory
 
 def main():
